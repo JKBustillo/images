@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Error from './Error';
 
-const Form = () => {
+const Form = ({ setBusqueda }) => {
     const [termino, setTermino] = useState('');
     const [error, setError] = useState(false);
 
@@ -17,6 +17,7 @@ const Form = () => {
         setError(false);
 
         // Send termino to App
+        setBusqueda(termino);
     };
 
     return (
