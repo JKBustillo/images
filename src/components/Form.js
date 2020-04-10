@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Form = ({ setBusqueda }) => {
     const [termino, setTermino] = useState('');
@@ -43,5 +44,9 @@ const Form = ({ setBusqueda }) => {
         </form>
     );
 }
- 
+
+Form.propTypes = {
+    setBusqueda: PropTypes.func.isRequired,
+};
+
 export default Form;
